@@ -7,7 +7,7 @@ const testimonials = [
   {
     id: 1,
     name: 'Emily Carter',
-    role: '1.65m subscribers',
+    // role: '1.65m subscribers',
     content: "Hands down the best editor I've worked with. Every TikTok looks clean, on-brand, and performs way better than before. Total game changer.",
     rating: 5,
     image: 'https://framerusercontent.com/images/7fL4QJDsuimM3GmAxnTxB58Lrw.jpg'
@@ -15,7 +15,7 @@ const testimonials = [
   {
     id: 2,
     name: 'James Richardson',
-    role: '2.45m subscribers',
+    // role: '2.45m subscribers',
     content: 'I send raw clips, and they come back looking like they were made for TV. Super quick turnaround and always nails the vibe.',
     rating: 5,
     image: 'https://framerusercontent.com/images/AqDU62U0ILWH6uLvadot2OfuggA.jpg',
@@ -24,7 +24,7 @@ const testimonials = [
   {
     id: 3,
     name: 'Sophie Williams',
-    role: '5m subscribers',
+    // role: '5m subscribers',
     content: "We've seen a noticeable uptick in engagement since working together. The edits are sharp, creative, and optimized perfectly for YouTube Shorts.",
     rating: 5,
     image: 'https://framerusercontent.com/images/OuUloSm0m69zkSLax5gEBHqD8Y.png'
@@ -32,7 +32,7 @@ const testimonials = [
   {
     id: 4,
     name: 'Sophie Williams',
-    role: '5m subscribers',
+    // role: '5m subscribers',
     content: "We've seen a noticeable uptick in engagement since working together. The edits are sharp, creative, and optimized perfectly for YouTube Shorts.",
     rating: 5,
     image: 'https://framerusercontent.com/images/OuUloSm0m69zkSLax5gEBHqD8Y.png'
@@ -40,7 +40,7 @@ const testimonials = [
   {
     id: 5,
     name: 'Sophie Williams',
-    role: '5m subscribers',
+    //  role: '5m subscribers',
     content: "We've seen a noticeable uptick in engagement since working together. The edits are sharp, creative, and optimized perfectly for YouTube Shorts.",
     rating: 5,
     image: 'https://framerusercontent.com/images/OuUloSm0m69zkSLax5gEBHqD8Y.png'
@@ -48,7 +48,7 @@ const testimonials = [
   {
     id: 6,
     name: 'Sophie Williams',
-    role: '5m subscribers',
+    // role: '5m subscribers',
     content: "We've seen a noticeable uptick in engagement since working together. The edits are sharp, creative, and optimized perfectly for YouTube Shorts.",
     rating: 5,
     image: 'https://framerusercontent.com/images/OuUloSm0m69zkSLax5gEBHqD8Y.png'
@@ -60,13 +60,15 @@ const Testimonial = () => {
   const controls2 = useAnimation()
   const containerRef1 = useRef(null)
   const containerRef2 = useRef(null)
-  const isInView = useInView(containerRef1, { once: true, amount: 0.1 })
+  const isInView1 = useInView(containerRef1, { once: false, amount: 0.1 })
+  const isInView2 = useInView(containerRef2, { once: false, amount: 0.1 })
 
   // Duplicate testimonials for seamless looping
   const duplicatedTestimonials = [...testimonials, ...testimonials]
 
   useEffect(() => {
-    if (isInView) {
+    // Start animations immediately to ensure they work on all screen sizes including mobile
+    const startAnimations = () => {
       // First row animation (left to right)
       controls1.start({
         x: ['0%', '-50%'],
@@ -93,11 +95,16 @@ const Testimonial = () => {
         }
       })
     }
-  }, [isInView, controls1, controls2])
+
+    // Start animations immediately on mount with a small delay to ensure DOM is ready
+    const timer = setTimeout(startAnimations, 100)
+    
+    return () => clearTimeout(timer)
+  }, [controls1, controls2])
 
   return (
     <section className="w-full bg-gray-100 py-8 md:py-12 lg:py-16 xl:py-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto">
+      <div className="w-full max-w-8xl mx-auto">
         {/* Header Section */}
         <div className="flex flex-row md:flex-row items-start md:items-center justify-between gap-6 md:gap-8 mb-12 md:mb-16">
           {/* Left Side - Heading and Rating */}
@@ -135,8 +142,9 @@ const Testimonial = () => {
           {/* First row */}
           <motion.div 
             ref={containerRef1}
-            className="flex gap-6 py-4 w-max"
+            className="flex items-stretch gap-4 sm:gap-6 py-4 w-max"
             animate={controls1}
+            style={{ willChange: 'transform' }}
           >
             {duplicatedTestimonials.map((testimonial, index) => (
               <div 
@@ -144,7 +152,7 @@ const Testimonial = () => {
                 className={`p-8 rounded-xl ${
                   index % 2 === 0 ? 'bg-white' : 
                   'bg-transparent border border-gray-200'
-                } shadow-sm flex flex-col h-full w-[90vw] sm:w-[400px] flex-shrink-0`}
+                } shadow-sm flex flex-col w-[350px] flex-shrink-0`}
               >
                 {/* Stars */}
                 <div className="flex mb-6">
@@ -181,9 +189,10 @@ const Testimonial = () => {
           {/* Second row */}
           <motion.div 
             ref={containerRef2}
-            className="flex gap-6 py-4 w-max mt-6 ml-auto"
+            className="flex items-stretch gap-4 sm:gap-6 py-4 w-max mt-6 ml-auto"
             animate={controls2}
-            style={{ x: '50%' }}
+            initial={{ x: '50%' }}
+            style={{ willChange: 'transform' }}
           >
             {duplicatedTestimonials.map((testimonial, index) => (
               <div 
@@ -191,7 +200,7 @@ const Testimonial = () => {
                 className={`p-8 rounded-xl ${
                   index % 2 === 1 ? 'bg-white' : 
                   'bg-transparent border border-gray-200'
-                } shadow-sm flex flex-col h-full w-[90vw] sm:w-[400px] flex-shrink-0`}
+                } shadow-sm flex flex-col w-[350px] flex-shrink-0`}
               >
                 {/* Stars */}
                 <div className="flex mb-6">

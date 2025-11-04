@@ -243,7 +243,7 @@ const Aboutme = () => {
               <div className="flex flex-col md:flex-row gap-3 sm:gap-4 md:gap-5 lg:gap-6 pb-4 sm:pb-5 md:pb-6 border-b border-gray-300 mb-4 sm:mb-5 md:mb-6">
                 <div className="w-full md:w-1/4 flex justify-center md:justify-start">
                   <div className="px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border border-gray-300 rounded-2xl bg-white inline-flex items-center justify-center">
-                    <span className="text-black text-sm sm:text-base md:text-lg lg:text-xl font-saira-condensed whitespace-nowrap text-center">2022 - 2023</span>
+                    <span className="text-black text-sm sm:text-base md:text-lg lg:text-xl font-saira-condensed whitespace-nowrap text-center">2024 - 2025</span>
                   </div>
                 </div>
                 <div className="w-full md:w-3/4 text-center md:text-left">
@@ -251,13 +251,13 @@ const Aboutme = () => {
                     FULL-STACK DEVELOPER
                   </h3>
                   <p className="text-black text-lg sm:text-sm md:text-base lg:text-lg font-saira-condensed">
-                    Software Company
+                    Dhigrowth Company
                   </p>
                 </div>
               </div>
 
               {/* Experience 3 */}
-              <div className="flex flex-col md:flex-row gap-3 sm:gap-4 md:gap-5 lg:gap-6 pb-4 sm:pb-5 md:pb-6 border-b border-gray-300 mb-4 sm:mb-5 md:mb-6">
+              {/* <div className="flex flex-col md:flex-row gap-3 sm:gap-4 md:gap-5 lg:gap-6 pb-4 sm:pb-5 md:pb-6 border-b border-gray-300 mb-4 sm:mb-5 md:mb-6">
                 <div className="w-full md:w-1/4 flex justify-center md:justify-start">
                   <div className="px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border border-gray-300 rounded-2xl bg-white inline-flex items-center justify-center">
                     <span className="text-black text-sm sm:text-base md:text-lg lg:text-xl font-saira-condensed whitespace-nowrap text-center">2021 - 2022</span>
@@ -271,21 +271,21 @@ const Aboutme = () => {
                     Development Company
                   </p>
                 </div>
-              </div>
+              </div> */}
 
               {/* Experience 4 */}
               <div className="flex flex-col md:flex-row gap-3 sm:gap-4 md:gap-5 lg:gap-6">
                 <div className="w-full md:w-1/4 flex justify-center md:justify-start">
                   <div className="px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border border-gray-300 rounded-2xl bg-white inline-flex items-center justify-center">
-                    <span className="text-black text-sm sm:text-base md:text-lg lg:text-xl font-saira-condensed whitespace-nowrap text-center">2017 - 2021</span>
+                    <span className="text-black text-sm sm:text-base md:text-lg lg:text-xl font-saira-condensed whitespace-nowrap text-center">2021 - 2024</span>
                   </div>
                 </div>
                 <div className="w-full md:w-3/4 text-center md:text-left">
                   <h3 className="text-black text-lg sm:text-base md:text-lg lg:text-xl xl:text-2xl uppercase font-saira-condensed mb-1 sm:mb-2 font-bold">
-                    DEGREE IN COMPUTER SCIENCE
+                    DEGREE IN COMPUTER APPLICATIONS
                   </h3>
                   <p className="text-black text-lg sm:text-sm md:text-base lg:text-lg font-saira-condensed">
-                    Harvard University
+                    Hindustan college of arts and science
                   </p>
                 </div>
               </div>

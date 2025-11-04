@@ -54,7 +54,7 @@ const Myimage = () => {
           onClick={handleHireMeClick}
         >
           {/* Circular HIRE ME Text */}
-          <div className="relative w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 xl:w-52 xl:h-52 animate-spin-slow overflow-visible">
+          <div className="relative w-32 h-32 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-44 lg:h-44 xl:w-52 xl:h-52 animate-spin-slow overflow-visible">
             <svg
               className="absolute inset-0 w-full h-full overflow-visible"
               viewBox="0 0 250 250"
@@ -68,8 +68,8 @@ const Myimage = () => {
               </defs>
               <text
                 fill="white"
-                fontSize="18"
-                className="sm:text-[20px] md:text-[22px] lg:text-[24px]"
+                fontSize="20"
+                className="text-[20px] sm:text-[20px] md:text-[22px] lg:text-[24px]"
                 fontFamily="'Saira Condensed', sans-serif"
                 textTransform="uppercase"
                 fontWeight="normal"
@@ -95,7 +95,7 @@ const Myimage = () => {
               <svg
                 width="28"
                 height="28"
-                className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 text-white group-hover:text-gray-300 transition-all duration-300"
+                className="w-7 h-7 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 text-white group-hover:text-gray-300 transition-all duration-300"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -126,13 +126,13 @@ const Myimage = () => {
               href={platform.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-saira-condensed uppercase hover:opacity-80 transition-all flex items-center gap-1 sm:gap-2"
+              className="text-white text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl font-saira-condensed uppercase hover:opacity-80 transition-all flex items-center gap-1 sm:gap-2"
             >
               {platform.name}
               <svg
                 width="16"
                 height="16"
-                className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0"
+                className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

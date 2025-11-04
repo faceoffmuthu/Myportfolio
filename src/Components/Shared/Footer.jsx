@@ -41,19 +41,19 @@ const Footer = () => {
         {/* Top Contact Section */}
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 sm:gap-8 md:gap-10 mb-6 sm:mb-8 md:mb-10 lg:mb-12">
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 flex-1 w-full">
-            <div className="flex-1 border border-gray-400 rounded-full px-3 sm:px-4 md:px-5 lg:px-6 py-2.5 sm:py-3 md:py-3.5 lg:py-4 text-center sm:text-left">
+            <a href="tel:+919629122832" className="flex-1 border border-gray-400 rounded-full px-3 sm:px-4 md:px-5 lg:px-6 py-2.5 sm:py-3 md:py-3.5 lg:py-4 text-center sm:text-left hover:bg-gray-200 transition-colors cursor-pointer">
               <p className="text-black text-sm sm:text-base md:text-lg lg:text-xl font-saira-condensed break-words">+91 9629122832</p>
-            </div>
-            <div className="flex-1 border border-gray-400 rounded-full px-3 sm:px-4 md:px-5 lg:px-6 py-2.5 sm:py-3 md:py-3.5 lg:py-4 text-center sm:text-left">
+            </a>
+            <a href="mailto:faceoffmuthu@gmail.com" className="flex-1 border border-gray-400 rounded-full px-3 sm:px-4 md:px-5 lg:px-6 py-2.5 sm:py-3 md:py-3.5 lg:py-4 text-center sm:text-left hover:bg-gray-200 transition-colors cursor-pointer">
               <p className="text-black text-sm sm:text-base md:text-lg lg:text-xl font-saira-condensed break-words">faceoffmuthu@gmail.com</p>
-            </div>
+            </a>
             <div className="flex-1 border border-gray-400 rounded-full px-3 sm:px-4 md:px-5 lg:px-6 py-2.5 sm:py-3 md:py-3.5 lg:py-4 text-center sm:text-left">
               <p className="text-black text-sm sm:text-base md:text-lg lg:text-xl font-saira-condensed break-words">Tirunelveli, Tamil Nadu</p>
             </div>
           </div>
 
-          <div className="flex items-start sm:items-center gap-2 sm:gap-3 flex-shrink-0 lg:ml-auto w-full sm:w-auto justify-center sm:justify-start lg:justify-end">
-            <span className="text-black text-lg sm:text-xl md:text-2xl flex-shrink-0">✺</span>
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 lg:ml-auto w-full sm:w-auto justify-center sm:justify-start lg:justify-end">
+            <span className="text-black text-lg sm:text-xl md:text-2xl flex-shrink-0 leading-none">✺</span>
             <h2 className="text-black text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold uppercase font-saira-condensed leading-tight">
               INTERESTED IN <br className="hidden sm:block" /> WORKING WITH ME ?
             </h2>

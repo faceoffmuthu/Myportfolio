@@ -4,7 +4,7 @@ import { logo } from '../assets/images'
 const Header = () => {
   return (
     <header className="w-full min-h-[80vh] lg:min-h-screen bg-white flex flex-col justify-between px-6 md:px-12 lg:px-16 py-3 md:py-8 lg:py-5">
-      <div className="w-full max-w-7xl mx-auto flex flex-col justify-between min-h-[calc(100vh-15rem)] md:min-h-[calc(100vh-24rem)]">
+      <div className="w-full max-w-7xl mx-auto flex flex-col justify-between min-h-[calc(100vh-20rem)] md:min-h-[calc(100vh-24rem)]">
         {/* Large MUTHU Heading - Upper Middle */}
         <div className="flex justify-center items-start pt-12 md:pt-16 lg:pt-24">
           <h1 className="text-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] font-sans font-bold tracking-tight">

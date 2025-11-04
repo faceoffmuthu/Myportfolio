@@ -125,9 +125,9 @@ const Myimage = () => {
       <div className="absolute right-3 sm:right-5 md:right-8 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center">
         <div className="flex flex-col gap-3 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10">
           {[
-            { name: "GITHUB", link: "https://github.com" },
-            { name: "DRIBBBLE", link: "https://dribbble.com" },
-            { name: "LINKEDIN", link: "https://linkedin.com" },
+            { name: "GITHUB", link: "https://github.com/faceoffmuthu" },
+            // { name: "DRIBBBLE", link: "https://dribbble.com" },
+            { name: "LINKEDIN", link: "https://www.linkedin.com/in/muthu-v-b202a431b/" },
           ].map((platform) => (
             <a
               key={platform.name}

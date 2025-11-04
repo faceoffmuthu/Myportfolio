@@ -1,0 +1,6 @@
+/* Hide default cursor on desktop only */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}

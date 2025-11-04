@@ -134,7 +134,7 @@ const Myimage = () => {
               href={platform.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black lg:text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-saira-condensed uppercase hover:opacity-80 transition-all flex items-center gap-1 sm:gap-2"
+              className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-saira-condensed uppercase hover:opacity-80 transition-all flex items-center gap-1 sm:gap-2"
             >
               {platform.name}
               <svg

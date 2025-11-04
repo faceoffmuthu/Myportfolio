@@ -5,7 +5,6 @@ import { myphoto } from "../assets/images";
 const Myimage = () => {
   const navigate = useNavigate();
   const [backgroundSize, setBackgroundSize] = useState('cover');
-  const [textFillColor, setTextFillColor] = useState('black');
 
   useEffect(() => {
     const handleResize = () => {
@@ -14,13 +13,6 @@ const Myimage = () => {
         setBackgroundSize('120%'); // Zoom in for tablet
       } else {
         setBackgroundSize('cover');
-      }
-      
-      // Set text color: black for mobile/tablet, white for desktop (lg and above)
-      if (window.innerWidth >= 1024) {
-        setTextFillColor('white');
-      } else {
-        setTextFillColor('black');
       }
     };
 
@@ -75,7 +67,7 @@ const Myimage = () => {
                 />
               </defs>
               <text
-                fill={textFillColor}
+                fill="white"
                 fontSize="18"
                 className="sm:text-[20px] md:text-[22px] lg:text-[24px]"
                 fontFamily="'Saira Condensed', sans-serif"
@@ -103,7 +95,7 @@ const Myimage = () => {
               <svg
                 width="28"
                 height="28"
-                className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 text-black lg:text-white group-hover:text-gray-300 lg:group-hover:text-gray-300 transition-all duration-300"
+                className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 text-white group-hover:text-gray-300 transition-all duration-300"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

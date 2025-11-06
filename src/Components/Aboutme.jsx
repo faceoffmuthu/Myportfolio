@@ -1,6 +1,6 @@
 import React from 'react'
 import { aboutme,html,css,javascript,tailwindcss,mongodb,react,node,express,figma,myResume } from '../assets/images'
-import { motion } from 'motion/react'
+import { motion, useScroll, useTransform } from 'motion/react'
 
 
 const Aboutme = () => {
@@ -13,6 +13,12 @@ const Aboutme = () => {
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [])
+
+  const rightImageRef = React.useRef(null)
+  const { scrollYProgress } = useScroll({ target: rightImageRef })
+  const opacity = useTransform(scrollYProgress, [1, 0.8], [0.4, 1])
+  const clipPath = useTransform(scrollYProgress, [0, 0.5], ["inset(0 100% 0 0)", "inset(0 0% 0 0)"])
+
   return (
     <>
       {/* About Me Section */}
@@ -41,7 +47,7 @@ const Aboutme = () => {
               </h2>
             </motion.div>
 
-            {/* Right Column - Image Section */}
+            {/* Right Column - Image Section with overlay reveal */}
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -49,12 +55,31 @@ const Aboutme = () => {
               transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
               className="w-full md:w-1/2"
             >
-              <div className="relative w-full aspect-square md:aspect-auto md:h-full">
-                <img 
-                  src={aboutme} 
-                  alt="About Me" 
-                  className="w-full h-full object-cover"
+              {/* RIGHT IMAGE + SCROLL ANIMATION OVERLAY */}
+              <div
+                ref={rightImageRef}
+                className="relative w-full md:w-1/2 min-h-[400px] overflow-hidden shadow-lg md:w-full"
+              >
+                {/* Background Image */}
+                <img
+                  src={aboutme}
+                  alt="About Me"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
+
+                {/* Overlay Reveal Animation */}
+                <motion.div
+                  style={{ opacity, clipPath }}
+                  className="absolute inset-0 bg-black/70 text-white flex flex-col justify-center items-center px-6 text-center"
+                >
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-cormorant mb-3 font-saira-condensed">
+                    Creative. Focused. Passionate.
+                  </h3>
+                  <p className="text-sm sm:text-base md:text-lg font-notosans max-w-md font-saira-condensed">
+                    Every line of code is crafted with precision and creativity to
+                    deliver meaningful, visually engaging experiences.
+                  </p>
+                </motion.div>
               </div>
             </motion.div>
           </div>

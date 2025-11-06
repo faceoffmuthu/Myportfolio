@@ -1,9 +1,18 @@
 import React from 'react'
-import { aboutme,html,css,javascript,tailwindcss,mongodb,react,node,express,figma } from '../assets/images'
+import { aboutme,html,css,javascript,tailwindcss,mongodb,react,node,express,figma,myResume } from '../assets/images'
 import { motion } from 'motion/react'
 
 
 const Aboutme = () => {
+  const [showResume, setShowResume] = React.useState(false)
+
+  const openResume = () => setShowResume(true)
+  const closeResume = () => setShowResume(false)
+  React.useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') closeResume() }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [])
   return (
     <>
       {/* About Me Section */}
@@ -251,7 +260,7 @@ const Aboutme = () => {
               <h2 className="text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold uppercase font-saira-condensed leading-tight mb-4 sm:mb-6 md:mb-8">
                 MY <br/>EXPERIENCE
               </h2>
-              <button className="px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 lg:py-4 border border-gray-300 rounded-full bg-white hover:bg-black hover:text-white transition-colors flex items-center gap-2 text-black font-saira-condensed text-xs sm:text-sm md:text-base w-auto">
+              <button onClick={openResume} className="px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 lg:py-4 border border-gray-300 rounded-full bg-white hover:bg-black hover:text-white transition-colors flex items-center gap-2 text-black font-saira-condensed text-xs sm:text-sm md:text-base w-auto">
                 VIEW MY CV
                 <span className="">↗</span>
               </button>
@@ -316,6 +325,33 @@ const Aboutme = () => {
           </motion.div>
         </div>
       </section>
+
+      {showResume && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 p-3 sm:p-4 md:p-6 overflow-auto"
+          onClick={closeResume}
+          data-no-custom-cursor
+        >
+          <div
+            className="relative w-full max-w-[min(92vw,960px)]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeResume}
+              aria-label="Close"
+              className="absolute -top-3 -right-3 md:-top-4 md:-right-4 w-9 h-9 md:w-10 md:h-10 rounded-full bg-white text-black shadow hover:bg-gray-100"
+              data-no-custom-cursor
+            >
+              ×
+            </button>
+            <img
+              src={myResume}
+              alt="Resume"
+              className="w-full h-auto max-h-[85vh] object-contain rounded-xl"
+            />
+          </div>
+        </div>
+      )}
     </>
   )
 }

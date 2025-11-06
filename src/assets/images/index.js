@@ -20,5 +20,6 @@ import myworks7 from './mywork7.png'
 import myworks8 from './mywork8.png'
 import myworks9 from './mywork9.png'
 import myphoto from './myphoto.png'
+import myResume from './Muthu-Resume.jpg'
 
-export { logo, aboutme, html, css, javascript, tailwindcss, mongodb, react, node, express, figma, arrow, myworks, myworks2, myworks3, myworks4, myworks5, myworks6, myworks7, myworks8, myworks9, myphoto }
+export { logo, aboutme, html, css, javascript, tailwindcss, mongodb, react, node, express, figma, arrow, myworks, myworks2, myworks3, myworks4, myworks5, myworks6, myworks7, myworks8, myworks9, myphoto,myResume }

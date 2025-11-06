@@ -10,7 +10,7 @@ import Myimage from '../Components/Myimage'
 const Homepage = () => {
   return (
     <div>
-      <Header />
+      <Header  />
       <Myimage />
       <div id="about">
         <Aboutme />

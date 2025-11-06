@@ -68,11 +68,14 @@ const Myimage = () => {
           transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
           >
           {/* Circular HIRE ME Text */}
-          <div className="relative w-32 h-32 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-44 lg:h-44 xl:w-52 xl:h-52 animate-spin-slow overflow-visible">
-            <svg
+          <div className="relative w-32 h-32 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-44 lg:h-44 xl:w-52 xl:h-52 overflow-visible">
+            <motion.svg
               className="absolute inset-0 w-full h-full overflow-visible"
               viewBox="0 0 250 250"
               xmlns="http://www.w3.org/2000/svg"
+              initial={{ rotate: 0 }}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 16, ease: 'linear', repeat: Infinity }}
             >
               <defs>
                 <path
@@ -102,7 +105,7 @@ const Myimage = () => {
                   HIRE ME ✺
                 </textPath>
               </text>
-            </svg>
+            </motion.svg>
 
             {/* Center Arrow */}
             <div className="absolute inset-0 flex items-center justify-center">

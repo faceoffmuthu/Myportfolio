@@ -1,57 +1,58 @@
 import React, { useEffect, useRef } from 'react'
 import { motion, useAnimation, useInView } from 'framer-motion'
+import { ClintReview1,ClintReview2,ClintReview3,ClintReview4 } from "../assets/images"; 
 import { Star } from 'lucide-react'
 import { arrow } from '../assets/images'
 
 const testimonials = [
   {
     id: 1,
-    name: 'Emily Carter',
+    name: 'Barani',
     // role: '1.65m subscribers',
-    content: "Hands down the best editor I've worked with. Every TikTok looks clean, on-brand, and performs way better than before. Total game changer.",
+    content: "Amazing work! The website looks perfect and loads super fast. Highly recommend!Professional, friendly, and highly talented — 10/10 experience!",
     rating: 5,
-    image: 'https://framerusercontent.com/images/7fL4QJDsuimM3GmAxnTxB58Lrw.jpg'
+    image: ClintReview1
   },
   {
     id: 2,
-    name: 'James Richardson',
+    name: 'Sasthik',
     // role: '2.45m subscribers',
-    content: 'I send raw clips, and they come back looking like they were made for TV. Super quick turnaround and always nails the vibe.',
+    content: 'Very professional and creative developer. Delivered exactly what I wanted! Fantastic job! The website is sleek, responsive, and exactly how I imagined.',
     rating: 5,
-    image: 'https://framerusercontent.com/images/AqDU62U0ILWH6uLvadot2OfuggA.jpg',
+    image: ClintReview2,
     variant: 'bg-gray-50'
   },
   {
     id: 3,
-    name: 'Sophie Williams',
+    name: 'Ragava',
     // role: '5m subscribers',
-    content: "We've seen a noticeable uptick in engagement since working together. The edits are sharp, creative, and optimized perfectly for YouTube Shorts.",
+    content: "Quick, reliable, and talented. My business site looks fantastic now! Great developer! Always on time and easy to communicate with.",
     rating: 5,
-    image: 'https://framerusercontent.com/images/OuUloSm0m69zkSLax5gEBHqD8Y.png'
+    image: ClintReview3
   },
   {
     id: 4,
-    name: 'Sophie Williams',
+    name: 'Jatinvyas',
     // role: '5m subscribers',
-    content: "We've seen a noticeable uptick in engagement since working together. The edits are sharp, creative, and optimized perfectly for YouTube Shorts.",
+    content: "Excellent work — clean design, smooth functionality, and right on time! Fantastic job! My business has grown since the new site launch.",
     rating: 5,
-    image: 'https://framerusercontent.com/images/OuUloSm0m69zkSLax5gEBHqD8Y.png'
+    image: ClintReview4
   },
   {
     id: 5,
     name: 'Sophie Williams',
     //  role: '5m subscribers',
-    content: "We've seen a noticeable uptick in engagement since working together. The edits are sharp, creative, and optimized perfectly for YouTube Shorts.",
+    content: "Loved working with Muthu. Great communication and beautiful design!Easy to work with and very skilled. My site has never looked better",
     rating: 5,
     image: 'https://framerusercontent.com/images/OuUloSm0m69zkSLax5gEBHqD8Y.png'
   },
   {
     id: 6,
-    name: 'Sophie Williams',
+    name: 'Emily Carter',
     // role: '5m subscribers',
-    content: "We've seen a noticeable uptick in engagement since working together. The edits are sharp, creative, and optimized perfectly for YouTube Shorts.",
+    content: "Super happy with the result! They turned my idea into a stunning website.Fast delivery, modern design, and great support. Totally worth it!",
     rating: 5,
-    image: 'https://framerusercontent.com/images/OuUloSm0m69zkSLax5gEBHqD8Y.png'
+    image: 'https://framerusercontent.com/images/7fL4QJDsuimM3GmAxnTxB58Lrw.jpg'
   },
 ]
 

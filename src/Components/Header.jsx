@@ -37,7 +37,7 @@ const Header = () => {
               Brand & Freelancer
             </h2>
             <h2 className="text-black text-xl md:text-2xl lg:text-3xl leading-relaxed">
-              Website Designer
+              Website Developer 
             </h2>
           </motion.div>
 

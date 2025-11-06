@@ -73,7 +73,7 @@ const Footer = () => {
                   <input
                     type="text"
                     name="user_name"
-                    placeholder="John Alex"
+                    placeholder="Enter Your Name"
                     required
                     className="w-full bg-transparent text-gray-500 text-sm sm:text-base md:text-lg lg:text-xl font-saira-condensed placeholder-gray-400 outline-none"
                   />

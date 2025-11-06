@@ -21,5 +21,9 @@ import myworks8 from './mywork8.png'
 import myworks9 from './mywork9.png'
 import myphoto from './myphoto.png'
 import myResume from './Muthu-Resume.jpg'
+import ClintReview1 from './Barani.jpg'
+import ClintReview2 from './Sathik.jpg'
+import ClintReview3 from './Ragava.jpg'
+import ClintReview4 from './K2Clarity.jpg'
 
-export { logo, aboutme, html, css, javascript, tailwindcss, mongodb, react, node, express, figma, arrow, myworks, myworks2, myworks3, myworks4, myworks5, myworks6, myworks7, myworks8, myworks9, myphoto,myResume }
+export { logo, aboutme, html, css, javascript, tailwindcss, mongodb, react, node, express, figma, arrow, myworks, myworks2, myworks3, myworks4, myworks5, myworks6, myworks7, myworks8, myworks9, myphoto,myResume,ClintReview1,ClintReview2,ClintReview3,ClintReview4 }

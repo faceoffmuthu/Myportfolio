@@ -8,7 +8,7 @@ const Aboutme = () => {
 
   const openResume = () => setShowResume(true)
   const closeResume = () => setShowResume(false)
-  React.useEffect(() => {
+  React.useEffect(() => { 
     const onKey = (e) => { if (e.key === 'Escape') closeResume() }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
